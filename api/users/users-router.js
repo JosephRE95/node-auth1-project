@@ -26,7 +26,7 @@ const User = require('./users-model')
   }
  */
 
-  router.get ('/', restricted, async (req, res, next) => {
+  router.get ('/', async (req, res, next) => {
     try{
       const users = await User.find()
       res.json(users)
